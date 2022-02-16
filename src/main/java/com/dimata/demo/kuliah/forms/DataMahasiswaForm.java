@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class DataSiswaForm implements RecordAdapter<DataMahasiswa> {
+public class DataMahasiswaForm implements RecordAdapter<DataMahasiswa> {
 
     private Long id;
     private String nim;
@@ -30,7 +30,7 @@ public class DataSiswaForm implements RecordAdapter<DataMahasiswa> {
             .alamat(alamat)
             .telp(telp)
             .kelas(kelas)
-            .idjurusan(idJurusan)
+            .idJurusan(idJurusan)
             .nim(nim)
             .id(id)
             .build();
@@ -42,7 +42,7 @@ public class DataSiswaForm implements RecordAdapter<DataMahasiswa> {
             .alamat(alamat)
             .telp(telp)
             .kelas(kelas)
-            .idjurusan(idJurusan)
+            .idJurusan(idJurusan)
             .nim(nim)
             .jenisKelamin(jenisKelamin)
             .namaMahasiswa(namaMahasiswa)

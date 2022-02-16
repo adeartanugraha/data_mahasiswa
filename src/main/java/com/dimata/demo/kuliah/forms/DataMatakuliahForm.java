@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import com.dimata.demo.kuliah.core.api.RecordAdapter;
 import com.dimata.demo.kuliah.core.util.jackson.DateDeserialize;
-import com.dimata.demo.kuliah.enums.GenderSiswa;
+import com.dimata.demo.kuliah.enums.GenderMahasiswa;
 import com.dimata.demo.kuliah.models.table.DataMatakuliah;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 

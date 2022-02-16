@@ -51,7 +51,7 @@ public class DataMahasiswa implements UpdateAvailable<DataMahasiswa>, Persistabl
         private String nim;
         private String namaMahasiswa;
         private String alamat;
-        private Long idjurusan;
+        private Long idJurusan;
         private GenderMahasiswa jenisKelamin;
         private String telp;
         private String kelas;
@@ -68,7 +68,7 @@ public class DataMahasiswa implements UpdateAvailable<DataMahasiswa>, Persistabl
             return new Builder()
                 .id(oldRecord.getId())
                 .alamat(changeItOrNot(newRecord.getAlamat(), oldRecord.getAlamat()))
-                .idjurusan(changeItOrNot(newRecord.getIdjurusan(), oldRecord.getIdjurusan()))
+                .idJurusan(changeItOrNot(newRecord.getIdJurusan(), oldRecord.getIdJurusan()))
                 .kelas(changeItOrNot(newRecord.getKelas(), oldRecord.getKelas()))
                 .jenisKelamin(changeItOrNot(newRecord.getJenisKelamin(), oldRecord.getJenisKelamin()))
                 .namaMahasiswa(changeItOrNot(newRecord.getNamaMahasiswa(), oldRecord.getNamaMahasiswa()))
@@ -84,7 +84,7 @@ public class DataMahasiswa implements UpdateAvailable<DataMahasiswa>, Persistabl
             DataMahasiswa result = new DataMahasiswa();
             
             result.setAlamat(alamat);
-            result.setIdjurusan(idjurusan);
+            result.setIdJurusan(idJurusan);
             result.setKelas(kelas);
             result.setJenisKelamin(jenisKelamin);
             result.setId(id);
@@ -101,7 +101,7 @@ public class DataMahasiswa implements UpdateAvailable<DataMahasiswa>, Persistabl
     private String nim;
     private String namaMahasiswa;
     private String alamat;
-    private Long idjurusan;
+    private Long idJurusan;
     private Integer jenisKelamin;
     private String telp;
     private String kelas;
@@ -131,7 +131,7 @@ public class DataMahasiswa implements UpdateAvailable<DataMahasiswa>, Persistabl
         result.setAlamat(ManipulateUtil.parseRow(row, ALAMAT_COL, String.class));
         result.setJenisKelamin(GenderMahasiswa.getJenisKelamin(ManipulateUtil.parseRow(row, JENIS_KELAMIN_COL, Integer.class)));
         result.setKelas(ManipulateUtil.parseRow(row, KELAS_COL, String.class));
-        result.setIdjurusan(ManipulateUtil.parseRow(row, ID_JURUSAN_COL, Long.class));
+        result.setIdJurusan(ManipulateUtil.parseRow(row, ID_JURUSAN_COL, Long.class));
         
         return result;
     }

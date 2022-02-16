@@ -42,7 +42,7 @@ public class MahasiswaController {
         return dataMahasiswaApi.getDataMahasiswa(id_mahasiswa);
     }
 
-    @PutMapping(path = BASE_URL + "/data_mahasiswa/{nisn}")
+    @PutMapping(path = BASE_URL + "/data_mahasiswa/{id_mahasiswa}")
     public Mono<DataMahasiswa> maintainerUpdateDataMahasiswa(@PathVariable("id_mahasiswa") long idMahasiswa, @RequestBody DataMahasiswaForm form) {
         return dataMahasiswaApi.updateDataMahasiswa(idMahasiswa, form);
     }
